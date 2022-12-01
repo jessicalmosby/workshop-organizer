@@ -27,7 +27,7 @@ async function fetchAndDisplayWorkshops() {
 
             participantEl.addEventListener('click', async () => {
                 await deleteParticipant(participant.id);
-                fetchAndDisplayWorkshops();
+                await fetchAndDisplayWorkshops();
             });
             participantsEl.append(participantEl);
         }

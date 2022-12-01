@@ -22,12 +22,13 @@ form.addEventListener('submit', async (e) => {
     const data = new FormData(form);
 
     const name = data.get('name');
-    const contact = data.get('contact_info');
-    const workshopId = data.get('workshop_id');
+    const contact = data.get('contact');
+    const workshopId = data.get('workshop-id');
 
     await createParticipants({
         name: name,
         contact_info: contact,
         workshop_id: workshopId,
     });
+    location.replace('../');
 });
