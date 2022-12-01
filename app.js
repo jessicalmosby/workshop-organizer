@@ -1,7 +1,7 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import './auth/user.js';
-import { getWorkshops } from './fetch-utils.js';
+import { deleteParticipant, getWorkshops } from './fetch-utils.js';
 import { renderWorkshop } from './render-utils.js';
 
 /* Get DOM Elements */
@@ -25,10 +25,10 @@ async function fetchAndDisplayWorkshops() {
             const participantEl = document.createElement('li');
             participantEl.textContent = `${participant.name}: ${participant.contact_info}`;
 
-            // participantEl.addEventListener('click', async () => {
-            //     deleteParticipant function go here
-            //     fetchAndDisplayWorkshops();
-            // });
+            participantEl.addEventListener('click', async () => {
+                await deleteParticipant(participant.id);
+                fetchAndDisplayWorkshops();
+            });
             participantsEl.append(participantEl);
         }
         workshopEl.append(participantsEl);
