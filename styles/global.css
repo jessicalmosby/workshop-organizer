@@ -69,3 +69,7 @@ main {
 .hidden {
     display: none;
 }
+
+.participant:hover {
+    cursor: pointer;
+}
