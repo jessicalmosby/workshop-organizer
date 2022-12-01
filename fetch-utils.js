@@ -53,5 +53,5 @@ export async function deleteParticipant(participantId) {
         .match({ id: participantId })
         .single();
 
-    return response(response);
+    return checkError(response);
 }

@@ -14,7 +14,6 @@ window.addEventListener('load', async () => {
 
 /* Display Functions */
 async function fetchAndDisplayWorkshops() {
-    // await getWorkshops();
     workshopListEl.textContent = '';
 
     const workshops = await getWorkshops();
@@ -27,7 +26,7 @@ async function fetchAndDisplayWorkshops() {
 
             participantEl.addEventListener('click', async () => {
                 await deleteParticipant(participant.id);
-                await fetchAndDisplayWorkshops();
+                fetchAndDisplayWorkshops();
             });
             participantsEl.append(participantEl);
         }
