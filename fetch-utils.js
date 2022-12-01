@@ -39,3 +39,19 @@ function checkError(response) {
     // eslint-disable-next-line no-console
     return response.error ? console.error(response.error) : response.data;
 }
+
+export async function createParticipants(participant) {
+    const response = await client.from('participants').insert(participant);
+
+    return checkError(response);
+}
+
+export async function deleteParticipant(participantId) {
+    const response = await client
+        .from('participants')
+        .delete()
+        .match({ id: participantId })
+        .single();
+
+    return response(response);
+}
