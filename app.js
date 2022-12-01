@@ -8,7 +8,9 @@ import { renderWorkshop } from './render-utils.js';
 const workshopListEl = document.getElementById('workshop-list');
 
 /* Events */
-// window event listener go here
+window.addEventListener('load', async () => {
+    await fetchAndDisplayWorkshops();
+});
 
 /* Display Functions */
 async function fetchAndDisplayWorkshops() {
