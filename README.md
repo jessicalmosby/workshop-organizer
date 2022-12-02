@@ -1,4 +1,6 @@
 ![wireframe](/assets/wireframe.png)
+![supabase_workshops](/assets/workshops.png)
+![supabase_participants](/assets/participants.png)
 
 ## Plan
 
