@@ -1,10 +1,10 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: white;
+    --header-background: rgba(255, 255, 255, 0.87);
     --text-color: rgb(7, 5, 68);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
+    --offset-color: rgba(255, 255, 255, 0.417);
     --action-color: rgb(77, 132, 252);
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
@@ -68,4 +68,8 @@ main {
 
 .hidden {
     display: none;
+}
+
+.participant:hover {
+    cursor: pointer;
 }

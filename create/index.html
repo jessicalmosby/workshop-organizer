@@ -15,7 +15,7 @@
             defer
             src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
         ></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="./create.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,9 +26,9 @@
         />
 
         <!-- css -->
-        <link rel="stylesheet" href="/styles/reset.css" />
-        <link rel="stylesheet" href="/styles/global.css" />
-        <link rel="stylesheet" href="/styles/home.css" />
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/create.css" />
         <!-- add link for page specific css -->
     </head>
 
@@ -36,16 +36,28 @@
         <header class="page-header">
             <p class="title">Jess, Benni & Grey's Academy of Workshops</p>
             <nav>
-                <a href="/create/index.html" id="add-participant">Add Participant</a>
+                <a href="/">Home</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
             </nav>
         </header>
 
         <main>
-            <h1>Some Workshops</h1>
-            <section id="workshop-list">
-                <!-- Workshop divs go here!! -->
-            </section>
+            <h1>Add New Participant</h1>
+            <form>
+                <label
+                    >Name
+                    <input name="name" />
+                </label>
+                <label
+                    >Contact Info
+                    <input name="contact" />
+                </label>
+                <label
+                    >Select Workshop
+                    <select name="workshop-id"></select>
+                </label>
+                <button type="submit">Add Participant</button>
+            </form>
         </main>
     </body>
 </html>

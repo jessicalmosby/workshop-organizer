@@ -1,0 +1,28 @@
+body {
+    font-family: fantasy, sans-serif;
+    background: linear-gradient(15deg, rgba(12, 138, 60, 0.545), rgba(255, 255, 255, 0.621) 80%),
+        url('../assets/plant-food-produce-vegetable-e7a77264ff7682513548b0d955cadcfb.jpeg');
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    text-align: center;
+}
+
+div {
+    border: solid 3px black;
+    border-radius: 5em;
+    margin: 2em;
+    padding: 0em 1em 1em 1em;
+    background-color: rgba(255, 255, 255, 0.482);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.533);
+}
